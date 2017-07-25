@@ -1,0 +1,179 @@
+/*page formating*/
+
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab');
+.h1 {
+    font-family: 'Zilla Slab', serif;
+}
+
+
+/*.img {
+ width: 20%;
+ float:right
+ 
+}*/
+
+.main1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #F9FBFE;
+    align-content: stretch;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    margin: 10% 18%;
+    border-radius: 4px;
+}
+
+.main2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: stretch;
+    margin: 10% 18%;
+    background-color: #F9FBFE;
+    border-radius: 4px;
+}
+
+h1 {
+    clear: both
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: block;
+    width: 100%;
+    background: url("../images/brick1.jpg");
+    position: relative;
+ margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*navbar styles*/
+
+.navbar {
+    list-style-type: none;
+    background-color: #DBE0E9;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 20;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 2%;
+}
+
+.active a {
+    color: black
+}
+
+.navbar a:hover {
+    color: black;
+}
+
+
+/* to make slider */
+
+.slider-holder {
+    background-color: yellow;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    overflow: hidden;
+    margin: 11% 25%;
+}
+
+.image-holder {
+    width: 2400px;
+    background-color: red;
+    height: 400px;
+    clear: both;
+    position: relative;
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
+}
+
+#slider-image-1:target~.image-holder {
+    left: 0px;
+}
+
+#slider-image-2:target~.image-holder {
+    left: -800px;
+}
+
+#slider-image-3:target~.image-holder {
+    left: -1600px;
+}
+
+.slider-change {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: brown;
+    position: relative;
+    top: 2%;
+    z-index: 10;
+}
+
+.slider-holder {
+    margin-top: -25px;
+    width: 100%;
+}
+
+
+/*to make nav bar responsive */
+
+.nav-toggle {
+    display: none;
+    /*   visibility: hidden; */
+}
+
+
+/* 
+5) Hide the button for desktop
+*/
+
+.nav-item {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+
+/* 
+4) Style nav -- inline, no bullet points, space between
+*/
+
+@media (max-width:400px) {
+    .nav-toggle {
+        display: block;
+    }
+    /* 
+6) Add media query for mobile styles
+*/
+    .nav-item {
+        display: block;
+    }
+    /* 
+8) Display the button on mobile
+*/
+    .mobile-nav-hidden {
+        display: none;
+    }
+}
+
+
+/* 
+9) Add a class that hides the nav items on mobile. This is an additional class because we are going to use it to sometimes show the nav and sometimes hide it
+*/
